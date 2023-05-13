@@ -28,145 +28,165 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCriar = new System.Windows.Forms.Button();
-            this.lblCliente = new System.Windows.Forms.Label();
-            this.txtCliente = new System.Windows.Forms.TextBox();
-            this.txtEmpresa = new System.Windows.Forms.TextBox();
-            this.lblEmpresa = new System.Windows.Forms.Label();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.dtpData = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblData = new System.Windows.Forms.Label();
-            this.lblPeriodo = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            btnCriar = new Button();
+            lblCliente = new Label();
+            txtCliente = new TextBox();
+            txtEmpresa = new TextBox();
+            lblEmpresa = new Label();
+            txtDescricao = new TextBox();
+            lblDescricao = new Label();
+            dtpData = new DateTimePicker();
+            cmbPeriodo = new ComboBox();
+            lblData = new Label();
+            lblPeriodo = new Label();
+            lblTipoServ = new Label();
+            cmbTipoServ = new ComboBox();
+            SuspendLayout();
             // 
             // btnCriar
             // 
-            this.btnCriar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCriar.Location = new System.Drawing.Point(536, 373);
-            this.btnCriar.Name = "btnCriar";
-            this.btnCriar.Size = new System.Drawing.Size(75, 23);
-            this.btnCriar.TabIndex = 0;
-            this.btnCriar.Text = "Criar";
-            this.btnCriar.UseVisualStyleBackColor = true;
-            this.btnCriar.Click += new System.EventHandler(this.btnCriar_Click);
+            btnCriar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCriar.Location = new Point(536, 373);
+            btnCriar.Name = "btnCriar";
+            btnCriar.Size = new Size(75, 23);
+            btnCriar.TabIndex = 0;
+            btnCriar.Text = "Criar";
+            btnCriar.UseVisualStyleBackColor = true;
+            btnCriar.Click += btnCriar_Click;
             // 
             // lblCliente
             // 
-            this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(70, 47);
-            this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(44, 15);
-            this.lblCliente.TabIndex = 1;
-            this.lblCliente.Text = "Cliente";
+            lblCliente.AutoSize = true;
+            lblCliente.Location = new Point(70, 21);
+            lblCliente.Name = "lblCliente";
+            lblCliente.Size = new Size(44, 15);
+            lblCliente.TabIndex = 1;
+            lblCliente.Text = "Cliente";
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(27, 65);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(262, 23);
-            this.txtCliente.TabIndex = 2;
+            txtCliente.Location = new Point(27, 39);
+            txtCliente.Name = "txtCliente";
+            txtCliente.Size = new Size(262, 23);
+            txtCliente.TabIndex = 2;
             // 
             // txtEmpresa
             // 
-            this.txtEmpresa.Location = new System.Drawing.Point(27, 120);
-            this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(262, 23);
-            this.txtEmpresa.TabIndex = 4;
+            txtEmpresa.Location = new Point(27, 94);
+            txtEmpresa.Name = "txtEmpresa";
+            txtEmpresa.Size = new Size(262, 23);
+            txtEmpresa.TabIndex = 4;
             // 
             // lblEmpresa
             // 
-            this.lblEmpresa.AutoSize = true;
-            this.lblEmpresa.Location = new System.Drawing.Point(70, 102);
-            this.lblEmpresa.Name = "lblEmpresa";
-            this.lblEmpresa.Size = new System.Drawing.Size(52, 15);
-            this.lblEmpresa.TabIndex = 3;
-            this.lblEmpresa.Text = "Empresa";
+            lblEmpresa.AutoSize = true;
+            lblEmpresa.Location = new Point(70, 76);
+            lblEmpresa.Name = "lblEmpresa";
+            lblEmpresa.Size = new Size(52, 15);
+            lblEmpresa.TabIndex = 3;
+            lblEmpresa.Text = "Empresa";
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescricao.Location = new System.Drawing.Point(27, 176);
-            this.txtDescricao.Multiline = true;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(467, 238);
-            this.txtDescricao.TabIndex = 6;
+            txtDescricao.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtDescricao.Location = new Point(27, 211);
+            txtDescricao.Multiline = true;
+            txtDescricao.Name = "txtDescricao";
+            txtDescricao.Size = new Size(467, 203);
+            txtDescricao.TabIndex = 6;
             // 
             // lblDescricao
             // 
-            this.lblDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(231, 158);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(58, 15);
-            this.lblDescricao.TabIndex = 5;
-            this.lblDescricao.Text = "Descrição";
+            lblDescricao.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            lblDescricao.AutoSize = true;
+            lblDescricao.Location = new Point(231, 193);
+            lblDescricao.Name = "lblDescricao";
+            lblDescricao.Size = new Size(58, 15);
+            lblDescricao.TabIndex = 5;
+            lblDescricao.Text = "Descrição";
             // 
             // dtpData
             // 
-            this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpData.Location = new System.Drawing.Point(368, 62);
-            this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(233, 23);
-            this.dtpData.TabIndex = 7;
+            dtpData.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            dtpData.Format = DateTimePickerFormat.Short;
+            dtpData.Location = new Point(373, 38);
+            dtpData.Name = "dtpData";
+            dtpData.Size = new Size(121, 23);
+            dtpData.TabIndex = 7;
             // 
-            // comboBox1
+            // cmbPeriodo
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Manhã",
-            "Tarde"});
-            this.comboBox1.Location = new System.Drawing.Point(368, 120);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 23);
-            this.comboBox1.TabIndex = 8;
+            cmbPeriodo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cmbPeriodo.FormattingEnabled = true;
+            cmbPeriodo.Items.AddRange(new object[] { "Manhã", "Tarde" });
+            cmbPeriodo.Location = new Point(373, 94);
+            cmbPeriodo.Name = "cmbPeriodo";
+            cmbPeriodo.Size = new Size(182, 23);
+            cmbPeriodo.TabIndex = 8;
             // 
             // lblData
             // 
-            this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblData.AutoSize = true;
-            this.lblData.Location = new System.Drawing.Point(386, 44);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(62, 15);
-            this.lblData.TabIndex = 9;
-            this.lblData.Text = "Data Atual";
+            lblData.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblData.AutoSize = true;
+            lblData.Location = new Point(391, 20);
+            lblData.Name = "lblData";
+            lblData.Size = new Size(62, 15);
+            lblData.TabIndex = 9;
+            lblData.Text = "Data Atual";
             // 
             // lblPeriodo
             // 
-            this.lblPeriodo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.Location = new System.Drawing.Point(386, 102);
-            this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(48, 15);
-            this.lblPeriodo.TabIndex = 10;
-            this.lblPeriodo.Text = "Periodo";
+            lblPeriodo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblPeriodo.AutoSize = true;
+            lblPeriodo.Location = new Point(391, 76);
+            lblPeriodo.Name = "lblPeriodo";
+            lblPeriodo.Size = new Size(48, 15);
+            lblPeriodo.TabIndex = 10;
+            lblPeriodo.Text = "Periodo";
+            // 
+            // lblTipoServ
+            // 
+            lblTipoServ.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTipoServ.AutoSize = true;
+            lblTipoServ.Location = new Point(45, 128);
+            lblTipoServ.Name = "lblTipoServ";
+            lblTipoServ.Size = new Size(87, 15);
+            lblTipoServ.TabIndex = 12;
+            lblTipoServ.Text = "Tipo de Serviço";
+            // 
+            // cmbTipoServ
+            // 
+            cmbTipoServ.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cmbTipoServ.FormattingEnabled = true;
+            cmbTipoServ.Items.AddRange(new object[] { "Atendimento", "Instalação", "POST" });
+            cmbTipoServ.Location = new Point(27, 146);
+            cmbTipoServ.Name = "cmbTipoServ";
+            cmbTipoServ.Size = new Size(182, 23);
+            cmbTipoServ.TabIndex = 11;
             // 
             // frmCriar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 426);
-            this.Controls.Add(this.lblPeriodo);
-            this.Controls.Add(this.lblData);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dtpData);
-            this.Controls.Add(this.txtDescricao);
-            this.Controls.Add(this.lblDescricao);
-            this.Controls.Add(this.txtEmpresa);
-            this.Controls.Add(this.lblEmpresa);
-            this.Controls.Add(this.txtCliente);
-            this.Controls.Add(this.lblCliente);
-            this.Controls.Add(this.btnCriar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCriar";
-            this.Text = "Form2";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(623, 426);
+            Controls.Add(lblTipoServ);
+            Controls.Add(cmbTipoServ);
+            Controls.Add(lblPeriodo);
+            Controls.Add(lblData);
+            Controls.Add(cmbPeriodo);
+            Controls.Add(dtpData);
+            Controls.Add(txtDescricao);
+            Controls.Add(lblDescricao);
+            Controls.Add(txtEmpresa);
+            Controls.Add(lblEmpresa);
+            Controls.Add(txtCliente);
+            Controls.Add(lblCliente);
+            Controls.Add(btnCriar);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "frmCriar";
+            Text = "Form2";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -179,8 +199,10 @@
         private TextBox txtDescricao;
         private Label lblDescricao;
         private DateTimePicker dtpData;
-        private ComboBox comboBox1;
+        private ComboBox cmbPeriodo;
         private Label lblData;
         private Label lblPeriodo;
+        private Label lblTipoServ;
+        private ComboBox cmbTipoServ;
     }
 }
