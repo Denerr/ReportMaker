@@ -52,10 +52,9 @@ namespace ReportMaker
                 }
                 else
                 {
-                    using (StreamWriter escreveArq = new StreamWriter(caminhoArquivo + nomeArquivo))
+                    using (StreamWriter escreveArq = File.AppendText(caminhoArquivo + nomeArquivo))
                     {
                         escreveArq.WriteLine(cmbTipoServ.Text + separador + txtCliente.Text + separador + txtEmpresa.Text + separador + cmbPeriodo.Text + separador + txtDescricao.Text);
-                        escreveArq.AutoFlush = true;
                     }
                     MessageBox.Show("Informações Salvas");
                 }
@@ -74,6 +73,11 @@ namespace ReportMaker
                 }
 
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
