@@ -20,7 +20,8 @@ namespace ReportMaker
 
         string caminhoArquivo = "C://VS_ReportBuilder/Relatorio/";
         string nomeArquivo = "Relatorio" + DateTime.Today.ToString("dd-MM-yyyy") + ".txt";
-        string separador = "&";
+        string separador = " - ";
+        string fimSessao = "------------------------------";
 
         private void btnCriar_Click(object sender, EventArgs e)
         {
@@ -39,9 +40,14 @@ namespace ReportMaker
                         File.Create(nomeArquivo).Close();
                         using (StreamWriter escreveArq = new StreamWriter(caminhoArquivo + nomeArquivo))
                         {
+                            //Preparação para a Visualização
+                            //escreveArq.WriteLine(cmbTipoServ.Text + separador + txtCliente.Text + separador + txtEmpresa.Text + separador + cmbPeriodo.Text + separador + txtDescricao.Text);
                             
-                            escreveArq.WriteLine(cmbTipoServ.Text + separador + txtCliente.Text + separador + txtEmpresa.Text + separador + cmbPeriodo.Text + separador + txtDescricao.Text);
-                            
+                            //Codigo para layout formatado
+                            escreveArq.WriteLine(cmbTipoServ.Text + separador + txtCliente.Text + separador + txtEmpresa.Text);
+                            escreveArq.WriteLine(txtDescricao.Text);
+                            escreveArq.WriteLine(fimSessao);
+
                         }
                         MessageBox.Show("Informações Salvas");
                     }
@@ -54,7 +60,13 @@ namespace ReportMaker
                 {
                     using (StreamWriter escreveArq = File.AppendText(caminhoArquivo + nomeArquivo))
                     {
-                        escreveArq.WriteLine(cmbTipoServ.Text + separador + txtCliente.Text + separador + txtEmpresa.Text + separador + cmbPeriodo.Text + separador + txtDescricao.Text);
+                        //Preparação para a Visualização
+                        //escreveArq.WriteLine(cmbTipoServ.Text + separador + txtCliente.Text + separador + txtEmpresa.Text + separador + cmbPeriodo.Text + separador + txtDescricao.Text);
+
+                        //Codigo para layout formatado
+                        escreveArq.WriteLine(cmbTipoServ.Text + separador + txtCliente.Text + separador + txtEmpresa.Text);
+                        escreveArq.WriteLine("-> "+txtDescricao.Text);
+                        escreveArq.WriteLine(fimSessao);
                     }
                     MessageBox.Show("Informações Salvas");
                 }
