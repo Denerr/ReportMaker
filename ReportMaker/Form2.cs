@@ -45,7 +45,8 @@ namespace ReportMaker
                             
                             //Codigo para layout formatado
                             escreveArq.WriteLine(cmbTipoServ.Text + separador + txtCliente.Text + separador + txtEmpresa.Text);
-                            escreveArq.WriteLine(txtDescricao.Text);
+                            escreveArq.WriteLine("-> " + txtDescricao.Text);
+                            escreveArq.WriteLine("Periodo: " + cmbPeriodo.Text);
                             escreveArq.WriteLine(fimSessao);
 
                         }
@@ -66,6 +67,7 @@ namespace ReportMaker
                         //Codigo para layout formatado
                         escreveArq.WriteLine(cmbTipoServ.Text + separador + txtCliente.Text + separador + txtEmpresa.Text);
                         escreveArq.WriteLine("-> "+txtDescricao.Text);
+                        escreveArq.WriteLine("Periodo: " + cmbPeriodo.Text);
                         escreveArq.WriteLine(fimSessao);
                     }
                     MessageBox.Show("Informações Salvas");
