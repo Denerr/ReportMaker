@@ -19,9 +19,18 @@ namespace ReportMaker
         }
 
         string caminhoArquivo = "C://VS_ReportBuilder/Relatorio/";
-        string nomeArquivo = "Relatorio" + DateTime.Today.ToString("dd-MM-yyyy") + ".txt";
+        string nomeArquivo = "Relatorio-" + DateTime.Today.ToString("dd-MM-yyyy") + ".txt";
         string separador = " - ";
         string fimSessao = "------------------------------";
+
+        private void limpaCampo()
+        {
+            txtCliente.Text = "";
+            txtDescricao.Text = "";
+            txtEmpresa.Text = "";
+            cmbPeriodo.Text = "";
+            cmbTipoServ.Text = "";
+        }
 
         private void btnCriar_Click(object sender, EventArgs e)
         {
@@ -51,6 +60,7 @@ namespace ReportMaker
 
                         }
                         MessageBox.Show("Informações Salvas");
+                        limpaCampo();
                     }
                     else
                     {
@@ -71,6 +81,7 @@ namespace ReportMaker
                         escreveArq.WriteLine(fimSessao);
                     }
                     MessageBox.Show("Informações Salvas");
+                    limpaCampo();
                 }
             }
             else
@@ -87,11 +98,6 @@ namespace ReportMaker
                 }
 
             }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

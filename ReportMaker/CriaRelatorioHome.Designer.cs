@@ -1,6 +1,6 @@
 ﻿namespace ReportMaker
 {
-    partial class Form1
+    partial class CriaRelatorioHome
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,6 +31,10 @@
             this.pnlMenuBg = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnVisualizar = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnSugestao = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnPendencia = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCriar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -45,6 +49,10 @@
             this.pnlMenuBg.BackColor = System.Drawing.Color.Black;
             this.pnlMenuBg.Controls.Add(this.panel4);
             this.pnlMenuBg.Controls.Add(this.btnVisualizar);
+            this.pnlMenuBg.Controls.Add(this.panel6);
+            this.pnlMenuBg.Controls.Add(this.btnSugestao);
+            this.pnlMenuBg.Controls.Add(this.panel5);
+            this.pnlMenuBg.Controls.Add(this.btnPendencia);
             this.pnlMenuBg.Controls.Add(this.panel3);
             this.pnlMenuBg.Controls.Add(this.btnCriar);
             this.pnlMenuBg.Controls.Add(this.panel2);
@@ -58,34 +66,73 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Gray;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 245);
+            this.panel4.Location = new System.Drawing.Point(0, 313);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(158, 205);
+            this.panel4.Size = new System.Drawing.Size(158, 137);
             this.panel4.TabIndex = 3;
             // 
             // btnVisualizar
             // 
             this.btnVisualizar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVisualizar.Location = new System.Drawing.Point(0, 205);
+            this.btnVisualizar.Location = new System.Drawing.Point(0, 273);
             this.btnVisualizar.Name = "btnVisualizar";
             this.btnVisualizar.Size = new System.Drawing.Size(158, 40);
             this.btnVisualizar.TabIndex = 3;
             this.btnVisualizar.Text = "Visualizar";
             this.btnVisualizar.UseVisualStyleBackColor = true;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Gray;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 251);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(158, 22);
+            this.panel6.TabIndex = 5;
+            // 
+            // btnSugestao
+            // 
+            this.btnSugestao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSugestao.Location = new System.Drawing.Point(0, 211);
+            this.btnSugestao.Name = "btnSugestao";
+            this.btnSugestao.Size = new System.Drawing.Size(158, 40);
+            this.btnSugestao.TabIndex = 5;
+            this.btnSugestao.Text = "Sugestão";
+            this.btnSugestao.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gray;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 189);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(158, 22);
+            this.panel5.TabIndex = 4;
+            // 
+            // btnPendencia
+            // 
+            this.btnPendencia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPendencia.Location = new System.Drawing.Point(0, 149);
+            this.btnPendencia.Name = "btnPendencia";
+            this.btnPendencia.Size = new System.Drawing.Size(158, 40);
+            this.btnPendencia.TabIndex = 4;
+            this.btnPendencia.Text = "Pendencia";
+            this.btnPendencia.UseVisualStyleBackColor = true;
+            this.btnPendencia.Click += new System.EventHandler(this.btnPendencia_Click);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gray;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 159);
+            this.panel3.Location = new System.Drawing.Point(0, 127);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(158, 46);
+            this.panel3.Size = new System.Drawing.Size(158, 22);
             this.panel3.TabIndex = 2;
             // 
             // btnCriar
             // 
             this.btnCriar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCriar.Location = new System.Drawing.Point(0, 119);
+            this.btnCriar.Location = new System.Drawing.Point(0, 87);
             this.btnCriar.Name = "btnCriar";
             this.btnCriar.Size = new System.Drawing.Size(158, 40);
             this.btnCriar.TabIndex = 0;
@@ -99,7 +146,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(158, 119);
+            this.panel2.Size = new System.Drawing.Size(158, 87);
             this.panel2.TabIndex = 1;
             // 
             // pnlTopmenuBg
@@ -130,7 +177,7 @@
             this.panel1.Size = new System.Drawing.Size(19, 426);
             this.panel1.TabIndex = 2;
             // 
-            // Form1
+            // CriaRelatorioHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,7 +186,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTopmenuBg);
             this.Controls.Add(this.pnlMenuBg);
-            this.Name = "Form1";
+            this.Name = "CriaRelatorioHome";
             this.Text = "Home";
             this.pnlMenuBg.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -157,5 +204,9 @@
         private Panel pnlTopmenuBg;
         private Panel pnlContainer;
         private Panel panel1;
+        private Panel panel6;
+        private Button btnSugestao;
+        private Panel panel5;
+        private Button btnPendencia;
     }
 }

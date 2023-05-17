@@ -1,11 +1,13 @@
 namespace ReportMaker
 {
-    public partial class Form1 : Form
+    public partial class CriaRelatorioHome : Form
     {
-        public Form1()
+        public CriaRelatorioHome()
         {
             InitializeComponent();
         }
+
+
 
         private Form formAtivo = null;
         private void abrirForm(Form childForm)
@@ -23,7 +25,28 @@ namespace ReportMaker
 
         private void btnCriar_Click(object sender, EventArgs e)
         {
-            abrirForm(new frmCriar());
+            if(formAtivo == null)
+            {
+                abrirForm(new frmCriar());
+            }
+            else
+            {
+                formAtivo?.Close();
+                formAtivo = null;
+            }
+        }
+
+        private void btnPendencia_Click(object sender, EventArgs e)
+        {
+            if (formAtivo == null)
+            {
+                abrirForm(new Pendencias());
+            }
+            else
+            {
+                formAtivo?.Close();
+                formAtivo = null;
+            }
         }
     }
 }
