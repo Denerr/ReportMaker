@@ -8,7 +8,6 @@ namespace ReportMaker
         }
 
 
-
         private Form formAtivo = null;
         private void abrirForm(Form childForm)
         {
