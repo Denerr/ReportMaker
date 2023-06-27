@@ -251,10 +251,11 @@
             // 
             // ptbImagem
             // 
-            this.ptbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptbImagem.Location = new System.Drawing.Point(460, 345);
+            this.ptbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ptbImagem.Location = new System.Drawing.Point(463, 345);
             this.ptbImagem.Name = "ptbImagem";
-            this.ptbImagem.Size = new System.Drawing.Size(111, 82);
+            this.ptbImagem.Size = new System.Drawing.Size(117, 96);
+            this.ptbImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbImagem.TabIndex = 21;
             this.ptbImagem.TabStop = false;
             // 
@@ -266,6 +267,7 @@
             this.btnUpload.TabIndex = 22;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // btnSalvar
             // 
@@ -275,6 +277,7 @@
             this.btnSalvar.TabIndex = 23;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label10
             // 
