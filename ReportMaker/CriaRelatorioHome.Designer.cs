@@ -59,7 +59,7 @@
             this.pnlMenuBg.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuBg.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuBg.Name = "pnlMenuBg";
-            this.pnlMenuBg.Size = new System.Drawing.Size(158, 450);
+            this.pnlMenuBg.Size = new System.Drawing.Size(158, 563);
             this.pnlMenuBg.TabIndex = 0;
             // 
             // panel4
@@ -68,7 +68,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 313);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(158, 137);
+            this.panel4.Size = new System.Drawing.Size(158, 250);
             this.panel4.TabIndex = 3;
             // 
             // btnVisualizar
@@ -99,6 +99,7 @@
             this.btnSugestao.TabIndex = 5;
             this.btnSugestao.Text = "Sugestão";
             this.btnSugestao.UseVisualStyleBackColor = true;
+            this.btnSugestao.Click += new System.EventHandler(this.btnSugestao_Click);
             // 
             // panel5
             // 
@@ -156,7 +157,7 @@
             this.pnlTopmenuBg.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlTopmenuBg.Location = new System.Drawing.Point(158, 0);
             this.pnlTopmenuBg.Name = "pnlTopmenuBg";
-            this.pnlTopmenuBg.Size = new System.Drawing.Size(642, 24);
+            this.pnlTopmenuBg.Size = new System.Drawing.Size(789, 24);
             this.pnlTopmenuBg.TabIndex = 1;
             // 
             // pnlContainer
@@ -165,23 +166,23 @@
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainer.Location = new System.Drawing.Point(158, 24);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(623, 426);
+            this.pnlContainer.Size = new System.Drawing.Size(770, 539);
             this.pnlContainer.TabIndex = 2;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(781, 24);
+            this.panel1.Location = new System.Drawing.Point(928, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(19, 426);
+            this.panel1.Size = new System.Drawing.Size(19, 539);
             this.panel1.TabIndex = 2;
             // 
             // CriaRelatorioHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(947, 563);
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTopmenuBg);

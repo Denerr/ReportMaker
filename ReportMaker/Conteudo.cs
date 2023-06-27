@@ -23,6 +23,7 @@ namespace ReportMaker
         string separador = " - ";
         string fimSessao = "------------------------------";
 
+
         private void limpaCampo()
         {
             txtCliente.Text = "";

@@ -10,11 +10,91 @@ using System.Windows.Forms;
 
 namespace ReportMaker
 {
-    public partial class Pendencias : Form
+    public partial class frmPendencias : Form
     {
-        public Pendencias()
+        public frmPendencias()
         {
             InitializeComponent();
+        }
+
+        string caminhoArquivo = "C://VS_ReportBuilder/Relatorio/";
+        string nomeArquivo = "Relatorio-" + DateTime.Today.ToString("dd-MM-yyyy") + ".txt";
+        string separador = " - ";
+        string fimSessao = "------------------------------";
+        string header = "[Pendencia]";
+
+
+
+        private void limpaCampo()
+        {
+            txtCliente.Text = "";
+            txtDescricao.Text = "";
+            txtEmpresa.Text = "";
+        }
+
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            string mensagemDir = "Diretorio não encontrado. Deseja criar um?";
+            string tituloDir = "Criar Diretorio?";
+            string mensagemArq = "Aquivo não encontrado. Deseja criar um?";
+            string tituloArq = "Criar Arquivo?";
+
+            if (Directory.Exists(caminhoArquivo))
+            {
+                if (!File.Exists(nomeArquivo))
+                {
+                    DialogResult criarArquivo = MessageBox.Show(mensagemArq, tituloArq, MessageBoxButtons.YesNo);
+                    if (criarArquivo == DialogResult.Yes)
+                    {
+                        File.Create(nomeArquivo).Close();
+                        using (StreamWriter escreveArq = new StreamWriter(caminhoArquivo + nomeArquivo))
+                        {
+                            //Codigo para layout formatado
+                            escreveArq.WriteLine(header);
+                            escreveArq.WriteLine(txtCliente.Text + separador + txtEmpresa.Text);
+                            escreveArq.WriteLine("-> " + txtDescricao.Text);
+                            escreveArq.WriteLine(fimSessao);
+
+                        }
+                        MessageBox.Show("Informações Salvas");
+                        limpaCampo();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    using (StreamWriter escreveArq = File.AppendText(caminhoArquivo + nomeArquivo))
+                    {
+                        //Preparação para a Visualização
+                        //escreveArq.WriteLine(cmbTipoServ.Text + separador + txtCliente.Text + separador + txtEmpresa.Text + separador + cmbPeriodo.Text + separador + txtDescricao.Text);
+
+                        //Codigo para layout formatado
+                        escreveArq.WriteLine(header);
+                        escreveArq.WriteLine(txtCliente.Text + separador + txtEmpresa.Text);
+                        escreveArq.WriteLine("-> " + txtDescricao.Text);
+                        escreveArq.WriteLine(fimSessao);
+                    }
+                    MessageBox.Show("Informações Salvas");
+                    limpaCampo();
+                }
+            }
+            else
+            {
+                DialogResult criarDiretorio = MessageBox.Show(mensagemDir, tituloDir, MessageBoxButtons.YesNo);
+                if (criarDiretorio == DialogResult.Yes)
+                {
+                    DirectoryInfo di = Directory.CreateDirectory(caminhoArquivo);
+                    MessageBox.Show("Diretório criado!\nSalve o arquivo novamente");
+                }
+                else
+                {
+                    this.Close();
+                }
+
+            }
         }
     }
 }

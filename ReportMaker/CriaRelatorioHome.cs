@@ -2,6 +2,7 @@ namespace ReportMaker
 {
     public partial class CriaRelatorioHome : Form
     {
+
         public CriaRelatorioHome()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace ReportMaker
             {
                 formAtivo?.Close();
                 formAtivo = null;
+                abrirForm(new frmCriar());
             }
         }
 
@@ -39,12 +41,27 @@ namespace ReportMaker
         {
             if (formAtivo == null)
             {
-                abrirForm(new Pendencias());
+                abrirForm(new frmPendencias());
             }
             else
             {
                 formAtivo?.Close();
                 formAtivo = null;
+                abrirForm(new frmPendencias());
+            }
+        }
+
+        private void btnSugestao_Click(object sender, EventArgs e)
+        {
+            if (formAtivo == null)
+            {
+                abrirForm(new frmSugestoes());
+            }
+            else
+            {
+                formAtivo?.Close();
+                formAtivo = null;
+                abrirForm(new frmSugestoes());
             }
         }
     }

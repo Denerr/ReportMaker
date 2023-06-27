@@ -44,7 +44,7 @@
             // btnCriar
             // 
             this.btnCriar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCriar.Location = new System.Drawing.Point(536, 373);
+            this.btnCriar.Location = new System.Drawing.Point(683, 486);
             this.btnCriar.Name = "btnCriar";
             this.btnCriar.Size = new System.Drawing.Size(75, 23);
             this.btnCriar.TabIndex = 0;
@@ -92,14 +92,14 @@
             this.txtDescricao.Location = new System.Drawing.Point(27, 211);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(467, 203);
-            this.txtDescricao.TabIndex = 6;
+            this.txtDescricao.Size = new System.Drawing.Size(614, 316);
+            this.txtDescricao.TabIndex = 10;
             // 
             // lblDescricao
             // 
             this.lblDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(231, 193);
+            this.lblDescricao.Location = new System.Drawing.Point(305, 193);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(58, 15);
             this.lblDescricao.TabIndex = 5;
@@ -112,7 +112,7 @@
             this.cmbPeriodo.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbPeriodo.Location = new System.Drawing.Point(373, 94);
+            this.cmbPeriodo.Location = new System.Drawing.Point(520, 94);
             this.cmbPeriodo.Name = "cmbPeriodo";
             this.cmbPeriodo.Size = new System.Drawing.Size(182, 23);
             this.cmbPeriodo.TabIndex = 8;
@@ -121,7 +121,7 @@
             // 
             this.lblPeriodo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.Location = new System.Drawing.Point(391, 76);
+            this.lblPeriodo.Location = new System.Drawing.Point(538, 76);
             this.lblPeriodo.Name = "lblPeriodo";
             this.lblPeriodo.Size = new System.Drawing.Size(48, 15);
             this.lblPeriodo.TabIndex = 10;
@@ -131,7 +131,7 @@
             // 
             this.lblTipoServ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTipoServ.AutoSize = true;
-            this.lblTipoServ.Location = new System.Drawing.Point(391, 21);
+            this.lblTipoServ.Location = new System.Drawing.Point(538, 21);
             this.lblTipoServ.Name = "lblTipoServ";
             this.lblTipoServ.Size = new System.Drawing.Size(87, 15);
             this.lblTipoServ.TabIndex = 12;
@@ -144,17 +144,19 @@
             this.cmbTipoServ.Items.AddRange(new object[] {
             "Atendimento",
             "Instalação",
-            "POST"});
-            this.cmbTipoServ.Location = new System.Drawing.Point(373, 39);
+            "POST",
+            "Estudo",
+            "Teste"});
+            this.cmbTipoServ.Location = new System.Drawing.Point(520, 39);
             this.cmbTipoServ.Name = "cmbTipoServ";
             this.cmbTipoServ.Size = new System.Drawing.Size(182, 23);
-            this.cmbTipoServ.TabIndex = 11;
+            this.cmbTipoServ.TabIndex = 6;
             // 
             // frmCriar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 426);
+            this.ClientSize = new System.Drawing.Size(770, 539);
             this.Controls.Add(this.lblTipoServ);
             this.Controls.Add(this.cmbTipoServ);
             this.Controls.Add(this.lblPeriodo);
