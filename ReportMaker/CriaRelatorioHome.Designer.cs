@@ -187,6 +187,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTopmenuBg);
             this.Controls.Add(this.pnlMenuBg);
+            this.MinimumSize = new System.Drawing.Size(963, 602);
             this.Name = "CriaRelatorioHome";
             this.Text = "Home";
             this.pnlMenuBg.ResumeLayout(false);

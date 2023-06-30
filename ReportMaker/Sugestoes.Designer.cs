@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSugestoes));
             this.label1 = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.txtEmpresa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Solicitante = new System.Windows.Forms.TextBox();
+            this.txtSolicitante = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtValorGerado = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,6 +54,8 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.pnlPrioridade.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagem)).BeginInit();
             this.SuspendLayout();
@@ -90,12 +93,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Empresa";
             // 
-            // Solicitante
+            // txtSolicitante
             // 
-            this.Solicitante.Location = new System.Drawing.Point(44, 152);
-            this.Solicitante.Name = "Solicitante";
-            this.Solicitante.Size = new System.Drawing.Size(268, 23);
-            this.Solicitante.TabIndex = 5;
+            this.txtSolicitante.Location = new System.Drawing.Point(44, 152);
+            this.txtSolicitante.Name = "txtSolicitante";
+            this.txtSolicitante.Size = new System.Drawing.Size(268, 23);
+            this.txtSolicitante.TabIndex = 5;
             // 
             // label3
             // 
@@ -288,6 +291,22 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "Faça o Upload de uma Imagem";
             // 
+            // printDocument1
+            // 
+            this.printDocument1.DocumentName = "Preview";
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // frmSugestoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -308,13 +327,14 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtValorGerado);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Solicitante);
+            this.Controls.Add(this.txtSolicitante);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtEmpresa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(770, 539);
             this.Name = "frmSugestoes";
             this.Text = "Sugestoes";
             this.pnlPrioridade.ResumeLayout(false);
@@ -331,7 +351,7 @@
         private TextBox txtTitulo;
         private TextBox txtEmpresa;
         private Label label2;
-        private TextBox Solicitante;
+        private TextBox txtSolicitante;
         private Label label3;
         private TextBox txtValorGerado;
         private Label label4;
@@ -352,5 +372,7 @@
         private Button btnUpload;
         private Button btnSalvar;
         private Label label10;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private PrintPreviewDialog printPreviewDialog1;
     }
 }

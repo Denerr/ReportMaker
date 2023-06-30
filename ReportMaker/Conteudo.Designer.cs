@@ -169,6 +169,7 @@
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.btnCriar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(770, 539);
             this.Name = "frmCriar";
             this.Text = "Form2";
             this.ResumeLayout(false);

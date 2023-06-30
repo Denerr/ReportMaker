@@ -113,6 +113,7 @@
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.btnCriar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(770, 539);
             this.Name = "frmPendencias";
             this.Text = "Pendencias";
             this.ResumeLayout(false);
