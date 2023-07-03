@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,8 @@ namespace ReportMaker
         {
             InitializeComponent();
         }
-       
-        string prioridade = "";
+
+        string prioridade;
 
         public void GerarArquivoTexto()
         {
@@ -101,8 +102,21 @@ namespace ReportMaker
             }
             else
             {
-                MessageBox.Show("Defina a Prioridade!!", "Prioridade Não Informada");
+                prioridade= "";
             }
+        }
+
+        public static Image resizeImage(Image imgToResize, Size size)
+        {
+            return (Image)(new Bitmap(imgToResize, size));
+        }
+
+        private void ImprimeImagem(PrintPageEventArgs e)
+        {
+            string caminhoImagem = ptbImagem.ImageLocation;
+            System.Drawing.Image img = System.Drawing.Image.FromFile(caminhoImagem);
+            img = resizeImage(img, new Size(350, 300));
+            e.Graphics.DrawImage(img, 250, 800);
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -112,7 +126,7 @@ namespace ReportMaker
             try
             {
                 OpenFileDialog dialog= new OpenFileDialog();
-                dialog.Filter = "jpeg files(*.jpeg)|*.jpeg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
+                dialog.Filter = "jpeg files(*.jpeg)|*.jpg|jpeg files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
 
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -129,34 +143,34 @@ namespace ReportMaker
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-
-            DialogResult printDialog = MessageBox.Show("Deseja confirmar a impressão?", "Imprimir?",MessageBoxButtons.OKCancel);
-            if(printDialog == DialogResult.OK)
+            getPrioridade();
+            if(prioridade == "")
             {
-                printPreviewDialog1.ShowDialog();
+                MessageBox.Show("Defina a Prioridade!!", "Prioridade Não Informada");
             }
-
-            //if (printPreviewDialog1.DialogResult == DialogResult.OK)
-            //    printDocument1.Print();
-
-            //getPrioridade();
-            //if(prioridade != "" && txtSolicitante.Text != "")
-            //{
-
-
-            //    //GerarArquivoTexto();
-            //    //MessageBox.Show("Prioridade: "+ prioridade, "Nivel de Prioridade");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Preencha o campo 'Solicitante' antes de salvar!");
-            //}
+            else
+            {
+                DialogResult printDialog = MessageBox.Show("Deseja confirmar a impressão?", "Imprimir?", MessageBoxButtons.OKCancel);
+                if (printDialog == DialogResult.OK)
+                {
+                    printPreviewDialog1.ShowDialog();
+                }
+            }
 
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawString(txtTitulo.Text,new Font("Arial",12,FontStyle.Regular),Brushes.Black, new PointF(130,130));
+            e.Graphics.DrawString(txtTitulo.Text,new Font("Arial",12,FontStyle.Regular),Brushes.Black, new PointF(340,100));
+            e.Graphics.DrawString("Empresa: " + txtEmpresa.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 150));
+            e.Graphics.DrawString("Solicitante: " + txtSolicitante.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 185));
+            e.Graphics.DrawString("Descrição:\n" + txtDetalhado.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 220));
+            e.Graphics.DrawString("Valor Gerado:\n" + txtValorGerado.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 370));
+            e.Graphics.DrawString("O que é esperado:\n" + txtEsperado.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 520));
+            e.Graphics.DrawString("Programa: " + cmbPrograma.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 670));
+            e.Graphics.DrawString("Prioridade: " + prioridade, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 705));
+            e.Graphics.DrawString("Data da Solicitação: " + dtpDataSolicitacao.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 740));
+            ImprimeImagem(e);
         }
     }
 }

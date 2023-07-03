@@ -111,6 +111,7 @@
             // 
             // txtValorGerado
             // 
+            this.txtValorGerado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtValorGerado.Location = new System.Drawing.Point(44, 209);
             this.txtValorGerado.Multiline = true;
             this.txtValorGerado.Name = "txtValorGerado";
@@ -119,6 +120,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(44, 191);
             this.label4.Name = "label4";
@@ -128,16 +130,18 @@
             // 
             // txtEsperado
             // 
-            this.txtEsperado.Location = new System.Drawing.Point(44, 304);
+            this.txtEsperado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtEsperado.Location = new System.Drawing.Point(44, 303);
             this.txtEsperado.Multiline = true;
             this.txtEsperado.Name = "txtEsperado";
-            this.txtEsperado.Size = new System.Drawing.Size(334, 58);
+            this.txtEsperado.Size = new System.Drawing.Size(334, 63);
             this.txtEsperado.TabIndex = 9;
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(44, 286);
+            this.label5.Location = new System.Drawing.Point(44, 285);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 15);
             this.label5.TabIndex = 8;
@@ -145,7 +149,8 @@
             // 
             // txtDetalhado
             // 
-            this.txtDetalhado.Location = new System.Drawing.Point(44, 398);
+            this.txtDetalhado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtDetalhado.Location = new System.Drawing.Point(44, 402);
             this.txtDetalhado.Multiline = true;
             this.txtDetalhado.Name = "txtDetalhado";
             this.txtDetalhado.Size = new System.Drawing.Size(334, 119);
@@ -153,8 +158,9 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(44, 380);
+            this.label6.Location = new System.Drawing.Point(44, 384);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 15);
             this.label6.TabIndex = 10;
@@ -162,6 +168,7 @@
             // 
             // dtpDataSolicitacao
             // 
+            this.dtpDataSolicitacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpDataSolicitacao.CustomFormat = "";
             this.dtpDataSolicitacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataSolicitacao.Location = new System.Drawing.Point(512, 46);
@@ -171,6 +178,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(512, 28);
             this.label7.Name = "label7";
@@ -180,6 +188,7 @@
             // 
             // cmbPrograma
             // 
+            this.cmbPrograma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbPrograma.FormattingEnabled = true;
             this.cmbPrograma.Items.AddRange(new object[] {
             "VipERP Gestão",
@@ -192,6 +201,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(512, 93);
             this.label8.Name = "label8";
@@ -243,6 +253,7 @@
             // 
             // pnlPrioridade
             // 
+            this.pnlPrioridade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPrioridade.Controls.Add(this.label9);
             this.pnlPrioridade.Controls.Add(this.rdbPrioridadeB);
             this.pnlPrioridade.Controls.Add(this.rdbPrioridadeA);
@@ -254,6 +265,8 @@
             // 
             // ptbImagem
             // 
+            this.ptbImagem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbImagem.Location = new System.Drawing.Point(463, 345);
             this.ptbImagem.Name = "ptbImagem";
@@ -264,6 +277,7 @@
             // 
             // btnUpload
             // 
+            this.btnUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpload.Location = new System.Drawing.Point(622, 380);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(100, 36);
@@ -274,6 +288,7 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalvar.Location = new System.Drawing.Point(611, 471);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(122, 36);
@@ -284,6 +299,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(586, 345);
             this.label10.Name = "label10";
@@ -312,6 +328,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 539);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtDetalhado);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtEsperado);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtValorGerado);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnUpload);
@@ -321,12 +343,6 @@
             this.Controls.Add(this.cmbPrograma);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dtpDataSolicitacao);
-            this.Controls.Add(this.txtDetalhado);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtEsperado);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtValorGerado);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSolicitante);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtEmpresa);
