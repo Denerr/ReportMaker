@@ -161,15 +161,18 @@ namespace ReportMaker
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawString(txtTitulo.Text,new Font("Arial",12,FontStyle.Regular),Brushes.Black, new PointF(340,100));
-            e.Graphics.DrawString("Empresa: " + txtEmpresa.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 150));
-            e.Graphics.DrawString("Solicitante: " + txtSolicitante.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 185));
-            e.Graphics.DrawString("Descrição:\n" + txtDetalhado.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 220));
-            e.Graphics.DrawString("Valor Gerado:\n" + txtValorGerado.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 370));
-            e.Graphics.DrawString("O que é esperado:\n" + txtEsperado.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 520));
-            e.Graphics.DrawString("Programa: " + cmbPrograma.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 670));
-            e.Graphics.DrawString("Prioridade: " + prioridade, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 705));
-            e.Graphics.DrawString("Data da Solicitação: " + dtpDataSolicitacao.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new PointF(100, 740));
+            float width = 550;
+            float height = 1000;
+
+            e.Graphics.DrawString(txtTitulo.Text,new Font("Arial",12,FontStyle.Regular),Brushes.Black, new RectangleF(340,100,width,height));
+            e.Graphics.DrawString("Empresa: " + txtEmpresa.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new RectangleF(100, 150, width, height));
+            e.Graphics.DrawString("Solicitante: " + txtSolicitante.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new RectangleF(100, 185, width, height));
+            e.Graphics.DrawString("Descrição:\n" + txtDetalhado.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new RectangleF(100, 220, width, height));
+            e.Graphics.DrawString("Valor Gerado:\n" + txtValorGerado.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new RectangleF(100, 370, width, height));
+            e.Graphics.DrawString("O que é esperado:\n" + txtEsperado.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new RectangleF(100, 520, width, height));
+            e.Graphics.DrawString("Programa: " + cmbPrograma.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new RectangleF(100, 670, width, height));
+            e.Graphics.DrawString("Prioridade: " + prioridade, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new RectangleF(100, 705, width, height));
+            e.Graphics.DrawString("Data da Solicitação: " + dtpDataSolicitacao.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new RectangleF(100, 740, width, height));
             ImprimeImagem(e);
         }
     }
