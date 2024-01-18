@@ -56,6 +56,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.btnImportar = new System.Windows.Forms.Button();
             this.pnlPrioridade.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagem)).BeginInit();
             this.SuspendLayout();
@@ -289,7 +290,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalvar.Location = new System.Drawing.Point(611, 471);
+            this.btnSalvar.Location = new System.Drawing.Point(497, 485);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(122, 36);
             this.btnSalvar.TabIndex = 23;
@@ -323,11 +324,23 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // btnImportar
+            // 
+            this.btnImportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImportar.Location = new System.Drawing.Point(636, 485);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(122, 36);
+            this.btnImportar.TabIndex = 25;
+            this.btnImportar.Text = "Importar";
+            this.btnImportar.UseVisualStyleBackColor = true;
+            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
+            // 
             // frmSugestoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 539);
+            this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDetalhado);
             this.Controls.Add(this.label5);
@@ -390,5 +403,6 @@
         private Label label10;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private PrintPreviewDialog printPreviewDialog1;
+        private Button btnImportar;
     }
 }
