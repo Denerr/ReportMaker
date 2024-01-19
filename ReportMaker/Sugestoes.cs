@@ -30,7 +30,7 @@ namespace ReportMaker
 
             string mensagemDir = "Diretorio não encontrado. Deseja criar um?";
             string tituloDir = "Criar Diretorio?";
-            string separador = ",";
+            string separador = "|";
 
             if (Directory.Exists(caminhoArquivoSugestao))
             {
